@@ -1,0 +1,54 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
+
+body {
+  background: black url("./footer_lodyas.png") repeat fixed center;
+  font-family: 'Roboto', sans-serif;
+  text-rendering: optimizeLegibility;
+  text-align: center;
+}
+
+#results {
+  margin-top: 10%;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+#prompt {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#explanation {
+  margin-top: 20px;
+  left: 32%;
+  width: 36%;
+  position:absolute;
+  background-color: rgba(0, 0, 0, 0.25);
+  color: white;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#prompt input[type=text] {
+    padding:5px 10px;
+    border:2px solid #222;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 1.5em;
+}
+
+#prompt input[type=text]:focus {
+    border:2px solid #EEE;
+    -webkit-box-shadow:0 0 20px white;
+    -moz-box-shadow: 0 0 20px white;
+    box-shadow:0 0 20px white;
+    outline: none;
+}
+
+#search-icon {
+  background-image: url("./magnifying-glass-3-xxl.png");
+  background-size: cover;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  vertical-align: top;
+}

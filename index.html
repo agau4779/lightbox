@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="assets/lightbox.css">
+    <title>Lightbox</title>
+  </head>
+  <body>
+    <div id="results">
+    </div>
+    <div id="prompt">
+      <div id="searchbar">
+        <input type="text" name="search" maxlength="200" onkeypress="handleSearch(event)" placeholder="Search...">
+        <div id="search-icon" onclick="handleSearchClick(event)">
+      </div>
+      <div id="explanation">
+        <p>
+          Search by typing in the box and pressing the <b>Enter</b> key.
+        </p>
+        <p>
+          See more images by pressing the <b>left</b> or <b>right</b> arrow keys.
+        </p>
+      </div>
+    </div>
+    <script src="assets/lightbox.js"></script>
+  </body>
+</html>
