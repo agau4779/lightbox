@@ -75,11 +75,14 @@ function clearOldResults() {
 }
 
 
-// Renders the image in the DOM.
+// Renders the image in the DOM. Image links to its original URL.
 function renderImage() {
   clearOldResults();
 
   let fixed_height_attrs = imageData[index].images.fixed_height
+
+  let link = document.createElement("a");
+  link.href = imageData[index].url;
 
   let img = document.createElement("img");
   img.src = fixed_height_attrs.url;
@@ -88,9 +91,17 @@ function renderImage() {
   img.alt = imageData[index].slug;
 
   let desc = document.createElement("p");
-  let text = document.createTextNode(imageData[index].slug);
+  let text = document.createTextNode("Source: ");
   desc.appendChild(text)
 
-  results.appendChild(img);
+  let source = document.createElement("a");
+  source.href = imageData[index].url;
+  let title = document.createTextNode(imageData[index].slug)
+  source.appendChild(title)
+  
+  desc.appendChild(source)
+
+  link.appendChild(img)
+  results.appendChild(link);
   results.appendChild(desc);
 }
